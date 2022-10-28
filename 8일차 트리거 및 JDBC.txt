@@ -1,0 +1,28 @@
+트리거 : 데이터베이스 안의 이벤트가 발생할 경우에 자동으로 실행되는 기능
+1. 데이터와 연관된 여러 작업을 좀 더 간편하게 수행
+2. 복잡한 데이터 규칙을 정할 수 있어 더 수준 높은 데이터 정의가 가능
+3. 여러 사용자의 공유하는 데이터 보안성과 안정성, 대처 능력을 높임
+전처리 : 암호화하여 본처리에 데이터 등록에 좋음
+후처리 : 데이터 로그를 남기는 데 좋음
+- Before/After : 트리거가 작동할 타이밍을 지정
+- Inserting/Updating/Deleting : 트리거가 작동할 때 DML 명령어 작성
+- New/Old : DML로 변경되는 행의 변경 전 값과 변경 후 값을 참조하는 데 사용
+- Follows : 트리거의 실행 순서 지정
+- Enable/Disable : 트리거의 비/활성화 지정
+ 
+JDBC : 자바와 DB를 연결해서 데이터 입출력 작업을 함
+- DriverManager : JDBC Driver를 관리하여 DB와 연결해서 Connection 구현 객체 생성
+- Connection : Statement, PreparedStatement, CallableStatement 구현 객체를 생성하며 트랜잭션 처리 및 DB 연결 끊음
+- Statement : DDL과 DML을 실행할 때 사용. 변경되지 않는 정적 SQL문 실행
+- PreparedStatement : Statement와 동일하게 SQL의 DDL, DML문을 실행할 때 사용. 편리성과 보안성
+- CallableStatement : DB에 저장되어 있는 프로시저와 함수를 호출할 때 사용
+
+jdbc 사용하여 DB연결시 1단계
+1. Driver 클래스를 로딩
+Jdbc DriverManager(java)에 Driver(업체) 파일이 로딩
+execute : SQL문 실행
+
+preparedstatement : 문장을 미리 만듬. 인자값에 ?를 넣고 나중에 값을 넣을수 있음
+LAST_INSERT_ID() : 스퀀스로 증가한 값 가져오기
+MariaDB는 dual같은 가상 테이블이 없어 테이블을 지정하지 않고 실행 시 가상테이블에서 실행됨
+
