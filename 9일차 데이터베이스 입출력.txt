@@ -1,0 +1,31 @@
+ResultSet : select문에 기술된 컬럼으로 구성된 행의 집합. 커서가 있는 행의 데이터만 읽을 수 있다.
+Result executeQuery() : 존재여부, 이동, 값얻기 작업(명시적). Select문을 실행해서 ResultSet을 얻음
+ResultSetMetaData : 쿼리결과에 관해 메서드를 작성할 때 사용(일반화된 코드)
+next() : 다음값이 있는지 확인
+getColumnCount : 컬럼의 갯수 호출
+getCoulmnName : 컬럼의 이름 호출
+getCoulmnTypeName : 컬럼의 타입 호출
+
+preparedStatement : 동적인 코딩(매개변수를 받아 값을 넘길 수 있음)
+Statement : 정적인 코딩
+
+Meta프로그램 : 일반화 코드(암묵적)
+executeUpdate : int 값을 반환
+execute : 참 거짓을 반환
+getProperty : property에 있는 값 호출
+
+CallableStatement : JDBC에서 프로시저와 함수를 호출할 때 사용
+
+JDBC는 INSERT,UPDATE,DELETE문을 실행할 때 마다 자동 커밋이 일어남
+setautocommit : 자동으로 저장함
+커넥션 풀 : 일정량의 Connection을 미리 생성하고 서버에서 클라이언트의 요청을 처리할 때 제공해주고 다시 반환받음
+Connection을 재사용
+Db연결시간을 절감 
+전체 Connection수를 관리
+
+커서 : 특정 SQL문을 처리한 결과를 담고있는 영역으로 일종의 포인터
+REF 커서 : 커서를 선언하는 시점에는 SQL을 지정하지 않고 커서가 오픈이 되는 시점에 SQL문장을 지정
+프로시저를 통해 커서의 결과를 받을때는 
+
+
+
